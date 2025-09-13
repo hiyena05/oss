@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Sticky footer with fixed navbar</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  :root{
+    --bg:#0d1117;
+    --panel:#161b22;
+    --text:#c9d1d9;
+    --muted:#8b949e;
+    --link:#58a6ff;
+    --border:#30363d;
+    --accent:#238636;
+    --nav-h:60px;
+    --pink:#ff99aa; /* 기존 빨강보다 핑크톤 */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    background:var(--bg);
+    color:var(--text);
+    font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial;
+  }
+  .navbar{
+    position:fixed;top:0;left:0;right:0;
+    height:var(--nav-h);
+    background:var(--bg);
+    border-bottom:1px solid var(--border);
+    display:flex;align-items:center;z-index:1000;
+  }
+  .nav-inner{
+    width:100%;max-width:1400px;margin:0 auto;
+    padding:0 20px;display:flex;align-items:center;gap:28px;
+  }
+  .brand{font-weight:700;color:#fff;}
+  .nav-links{display:flex;align-items:center;gap:18px;}
+  .nav-links a{color:var(--text);text-decoration:none;}
+  .nav-links a:hover{text-decoration:underline;}
+  .nav-links .disabled{color:var(--muted);cursor:not-allowed;}
+  .search{margin-left:auto;display:flex;gap:8px;align-items:center;}
+  .search input{
+    width:290px;height:40px;background:var(--bg);
+    border:1px solid var(--border);color:var(--text);
+    border-radius:8px;padding:0 12px;
+  }
+  .search button{
+    height:40px;padding:0 14px;background:transparent;
+    color:var(--text);border:1px solid var(--accent);
+    border-radius:8px;cursor:pointer;
+  }
+  .search button:hover{filter:brightness(1.1);}
+  main{
+    flex:1;max-width:1200px;margin:0 auto;
+    padding:calc(var(--nav-h) + 40px) 40px 40px;
+  }
+  .content{max-width:860px;padding-left:54px;}
+  h1{font-size:48px;font-weight:800;margin-bottom:20px;}
+  .lead{font-size:20px;margin-bottom:24px;}
+  a{color:var(--link);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+
+  code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas;
+    color:var(--pink);
+    background:none;
+    padding:0;
+  }
+  footer{
+    background:var(--panel);
+    border-top:1px solid var(--border);
+    padding:20px 40px;
+    color:var(--muted);
+  }
+  .footer-inner{max-width:1200px;margin:0 auto;padding-left:54px;}
+</style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-inner">
+      <div class="brand">Fixed navbar</div>
+      <div class="nav-links">
+        <a href="example1.html">Home</a>
+        <a href="#">Link</a>
+        <span class="disabled">Disabled</span>
+      </div>
+      <form class="search" onsubmit="return false;">
+        <input type="search" placeholder="Search" aria-label="Search" />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <main>
+    <div class="content">
+      <h1>Sticky footer with fixed navbar</h1>
+      <p class="lead">
+        Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS.
+        A fixed navbar has been added with <code>padding-top: 60px;</code> on the <code>main &gt; .container</code>.
+      </p>
+      <p>
+        Back to <a href="example1.html">the default sticky footer</a> minus the navbar.
+      </p>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">Place sticky footer content here.</div>
+  </footer>
+</body>
+</html>

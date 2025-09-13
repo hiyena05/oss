@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome to 이예나's homepage 22400553</title>
+  <style>
+    :root{
+      --brick:#e1462b;
+      --paper:#fff;
+      --ink:#e1462b;
+      --chip-fill:#e1462b;
+      --chip-text:#fff;
+      --chip-hover-bg:#fff;
+      --chip-hover-text:#e1462b;
+      --chip-border:#e1462b;
+      --sidebar-bg:#f3e0dc;
+    }
+    body{
+      margin:20px;
+      background:var(--brick);
+      color:#222;
+      font-family:"Segoe UI", Arial, Helvetica, sans-serif;
+      line-height:1.55;
+    }
+    .div_navtop{color:#fff;margin-bottom:20px}
+    .div_navtop h1{margin:0;font-size:48px;font-weight:800}
+    .div_navetop_content{margin-top:8px;font-size:18px;opacity:.95}
+    .div_centercontent{
+      display:grid;
+      grid-template-columns:1fr 220px;
+      gap:20px;
+      background:var(--paper);
+      border:none;
+      border-radius:0;
+      padding:12px 20px;
+    }
+    .div_contentleft h1{margin:6px 0 12px;font-size:28px;color:var(--ink)}
+    .div_contentleft h2{margin:18px 0 10px;font-size:20px;color:var(--ink)}
+    .div_contentleft p{margin:0 0 12px;font-size:15px}
+    .div_contentleft a{
+      color:#e1462b;
+      text-decoration:none;
+      font-weight:700;
+      margin:0;
+      padding:0;
+    }
+    .div_contentleft a:hover{text-decoration:underline}
+    .div_sidebox{
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-start;
+      gap:12px;
+    }
+    .div_LorRcontent ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+    .div_LorRcontent li{margin:0}
+    .chip{
+      display:block;
+      width:190px;
+      height:42px;
+      line-height:42px;
+      background:var(--chip-fill);
+      color:var(--chip-text);
+      font-weight:700;
+      text-decoration:none;
+      text-align:center;
+      border-radius:25px;
+      border:2px solid transparent;
+      transition:.2s ease;
+    }
+    .chip:hover{background:var(--chip-hover-bg);color:var(--chip-hover-text);border-color:var(--chip-border)}
+    .chip.active{background:var(--chip-hover-bg);color:var(--chip-hover-text);border-color:var(--chip-border)}
+    .div_sidebar_full{
+      background:var(--sidebar-bg);
+      border:none;
+      border-radius:0;
+      padding:14px 16px;
+      margin-top:0;
+      color:var(--ink); 
+    }
+    .div_sidebar_full h3{margin:0 0 8px;font-size:18px;font-weight:700;color:var(--ink)}
+    .div_footer{
+      margin-top:20px;
+      color:#fff;
+      font-size:13px;
+      text-align:center;
+      line-height:1.4;
+    }
+  </style>
+</head>
+<body>
+  <div class="div_navtop">
+    <h1>Welcome to 이예나's homepage 22400553</h1>
+    <div class="div_navetop_content">Use the menu to select different Stylesheets</div>
+  </div>
+  <div class="div_centercontent">
+    <div class="div_contentleft">
+      <h1>Same Page Different Stylesheets</h1>
+      <p>
+        This is a demonstration of how different stylesheets can change the layout of your HTML page.
+        You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of the following links:
+      </p>
+      <div>
+        <a href="./stylesheet1.html">Stylesheet1</a>,
+        <a href="./stylesheet2.html">Stylesheet2</a>,
+        <a href="./stylesheet3.html">Stylesheet3</a>,
+        <a href="./stylesheet4.html">Stylesheet4</a>.
+      </div>
+      <h2>No Styles</h2>
+      <p>
+        This page uses DIV elements to group different sections of the HTML page. Click here to see how the page looks like with no stylesheet:
+      </p>
+      <div>
+        <a href="./index.html">No Stylesheet</a>.
+      </div>
+    </div>
+    <aside class="div_sidebox">
+      <div class="div_LorRcontent">
+        <ul>
+          <li><a class="chip" href="./stylesheet1.html">Stylesheet 1</a></li>
+          <li><a class="chip active" href="./stylesheet2.html">Stylesheet 2</a></li>
+          <li><a class="chip" href="./stylesheet3.html">Stylesheet 3</a></li>
+          <li><a class="chip" href="./stylesheet4.html">Stylesheet 4</a></li>
+          <li><a class="chip" href="./index.html">No Stylesheet</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+  <div class="div_sidebar_full">
+    <h3>Side-Bar</h3>
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+    dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+    lobortis nisl ut aliquip ex ea commodo consequat.
+  </div>
+  <div class="div_footer">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+    dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+    lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+    molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+    praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+  </div>
+</body>
+</html>
